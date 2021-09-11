@@ -1,0 +1,29 @@
+[
+  {
+    "name":"Domino’s Pizza",
+    "src": "img/logo-pizza.png",
+    "delivery": "0",
+    "star": "5.0",
+    "vote": "736",
+    "menu": "Пица",
+    "distance": "2,8"
+  },
+  {
+    "name":"McDonald’s",
+    "src": "img/logo-mac.png",
+    "delivery": "20",
+    "star": "4.1",
+    "vote": "959",
+    "menu": "Бургеры",
+    "distance": "9,0"
+  },
+  {
+    "name":"KFC",
+    "src": "img/logo-kfc.png",
+    "delivery": "0",
+    "star": "4.4",
+    "vote": "583",
+    "menu": "Курица",
+    "distance": "18,6"
+  }
+]

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Lectrum</title>
+  </head>
+  <body>
+  <div class="wrapper">
+    <aside class="aside">
+      <a href="/" class="logo"><img src="img/logo-main.png" alt="Ням-ням лого"></a>
+      <nav class="navigation">
+        <a class="navigation__item navigation__item--choice selected" href="/">Выбор</a>
+        <a class="navigation__item navigation__item--saved disabled" href="#">Сохраненное</a>
+        <a class="navigation__item navigation__item--orders" href="orders.html">Заказы</a>
+        <a class="navigation__item navigation__item--email disabled" href="#">Сообщения</a>
+        <a class="navigation__item navigation__item--settings disabled" href="#">Настройки</a>
+      </nav>
+      <div class="user">
+        <img class="user__image" src="img/user.svg" alt="">
+        <div>
+          <div class="user__name">Иван Вкуснолюбов</div>
+          <div>ivkusnoljubov@lectrum.io</div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="top-bar">
+        <div class="top-bar__left">
+          <div class="select">
+            <img class="select__icon" src="img/icons/location.svg" alt="">
+            <select class="select__field" name="location">
+              <option class="select__option" value="">Минск, Белоруссия</option>
+              <option class="select__option" value="">Минск, Белоруссия</option>
+              <option class="select__option" value="">Минск, Белоруссия</option>
+            </select>
+          </div>
+
+          <div class="select">
+            <img class="select__icon" src="img/icons/shopping-bag.svg" alt="">
+            <select class="select__field" name="delivery-option">
+              <option class="select__option" value="">Забрать с собой</option>
+              <option class="select__option" value="">Доставить домой</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="top-bar__right">
+          <div class="input">
+            <img class="input__icon" src="img/icons/search.svg" alt="">
+            <input class="input__field" type="text" placeholder="Найти что-нибудь вкусное">
+          </div>
+          <button id="orderBasket" class="icon-button icon-button--orange">
+            <img src="img/icons/shopping-cart.svg" alt="">
+            <span id="orderCount" class="icon-button__badge">0</span>
+          </button>
+        </div>
+      </div>
+
+      <section>
+        <h2 class="h2">Рекомендуем</h2>
+        <div id="featured" class="featured"></div>
+      </section>
+
+      <section class="tabs">
+        <div class="tabs__heading">
+          <button class="tabs__button active">Популярное (8)</button>
+          <button class="tabs__button disabled">Бургеры (0)</button>
+          <button class="tabs__button disabled">Картошка (0)</button>
+          <button class="tabs__button disabled">Напитки (0)</button>
+          <button class="tabs__button disabled">Наггетсы (0)</button>
+        </div>
+        <div id="cartsContent" class="tabs__content">
+        </div>
+      </section>
+    </main>
+  </div>
+
+<!--  add class 'visible' to open drawer-->
+  <div id="drawer" class="overlay">
+    <div class="drawer">
+      <div class="drawer__main">
+        <div class="drawer__header">
+          <h2 class="h2">Мой заказ <span id="subtitle" class="subtitle">(2 наименования)</span></h2>
+          <button class="close-order icon-button"><img src="img/icons/close.svg" alt=""></button>
+        </div>
+
+        <div class="delivery-option">
+          <div class="delivery-option__title">Доставить</div>
+          <div>по домашнему адресу</div>
+        </div>
+
+        <h2 id="restaurant-name" class="h2">McDonald’s</h2>
+        <div class="order"></div>
+
+        <button class="close-order add-more">
+          <img class="close-order add-more__icon" src="img/icons/plus-purple.svg" alt="">
+          Добавить еще вкусняшек
+        </button>
+
+        <div class="delivery-price">
+          <img src="img/icons/delivery.svg" alt="">
+          <div id="delivery" class="delivery-price__info">
+            <span class="delivery-price__title">Доставка</span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="drawer__footer">
+          <div class="textarea">
+            <label class="textarea__label" for="comments">Ваши пожелания</label>
+            <textarea class="textarea__field" name="comments" id="comments"></textarea>
+          </div>
+
+          <button id="checkout" class="button">
+            <span  class="button__label">Оформить заказ</span> (303 грн)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
